@@ -33,7 +33,6 @@ void calculateRepayment(float loan,float interestRate,int years)
 	loan = (loan + loan*interestRate)-installment;
 	printf("\nYear %d: Remaining Loan = %.1f", i, loan);
 	++i;
-	--years;
-	calculateRepayment(loan, interestRate, years);
+	calculateRepayment(loan, interestRate, years-1);
 }
 
