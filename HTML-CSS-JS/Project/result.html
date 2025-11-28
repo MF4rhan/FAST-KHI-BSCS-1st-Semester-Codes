@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selection Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      text-align: center;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      display: inline-block;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    .selected {
+      color: green;
+      font-weight: bold;
+    }
+    .not-selected {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Admission Selection Results</h1>
+  <div id="result" class="card"></div>
+
+  <script>
+    // Retrieve the data from localStorage
+    const name = localStorage.getItem('name');
+    const roll = localStorage.getItem('roll');
+    const marks = localStorage.getItem('marks');
+    const age = localStorage.getItem('age');
+
+    const resultDiv = document.getElementById('result'); 
+    //Basically, resultDiv is the card now. In the following code, we update the HTML of this card(resultDiv) according to markValue.
+
+    if (name && roll && marks && age) {
+      const markValue = Number(marks);
+
+      // Example selection rule: marks >= 80 means selected
+      if (markValue >= 80) {
+        resultDiv.innerHTML = `
+          <h2>${name} (Roll: ${roll})</h2>
+          <p>Marks: ${marks}</p>
+          <p>Age: ${age}</p>
+          <p class="selected">🎉 Congratulations! You are selected.</p>
+        `;
+      } else {
+        resultDiv.innerHTML = `
+          <h2>${name} (Roll: ${roll})</h2>
+          <p>Marks: ${marks}</p>
+          <p>Age: ${age}</p>
+          <p class="not-selected">Sorry, you did not meet the selection criteria.</p>
+        `;
+      }
+    } else {
+      resultDiv.innerHTML = `<p>No application data found. Please fill the admission form first.</p>`;
+    }
+  </script>
+
+</body>
+</html>
