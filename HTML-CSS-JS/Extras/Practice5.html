@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloring Page</title>
+    <style>
+        div
+        {
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            text-align: center;
+        }
+        #divi
+        {
+            background-color: blue;
+        }
+        button
+        {
+            padding: 10px 12px;
+            border-radius: 8px;
+            color: white;
+        }
+       #red:hover
+        {
+            background-color: red;
+        }
+        #green:hover{
+            background-color: green;
+        }
+        #yellow:hover
+        {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="divi"></div>
+    <div>
+        <button type="button" id="red">RED</button>
+        <button type="button" id="green">GREEN</button>
+        <button type="button" id="yellow">YELLOW</button>
+    </div>
+    <script>
+        let divo = document.getElementById('divi');
+        let redo = document.getElementById('red');
+        let gren = document.getElementById('green');
+        let yello = document.getElementById('yellow');
+        redo.addEventListener('click', function () {
+            divo.style.backgroundColor = 'red';
+        });
+        gren.addEventListener('click', function () {
+            divo.style.backgroundColor = 'green';
+        });
+        yello.addEventListener('click', function () {
+            divo.style.backgroundColor = 'yellow';
+        });
+    </script>
+</body>
+</html>

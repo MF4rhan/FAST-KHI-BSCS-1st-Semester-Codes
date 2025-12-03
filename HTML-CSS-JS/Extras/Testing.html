@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <style>
+        .navbar {
+            list-style: none;
+            background-color: darkblue;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li {
+            float: left;
+        }
+        .navbar li a {
+            text-align: center;
+            display: block;
+            color: aliceblue;
+            text-decoration: none;
+            padding: 14px 16px; /* 14px top/bottom, 16px left/right */
+        }
+        .navbar li a:hover {
+            background-color: #333; /* Visual feedback on hover */
+        }
+        
+        input[type=text], input[type=password], input[type=datetime-local] {
+            width: 100%; /* Makes input fill the container */
+            padding: 10px; /* Adds breathing room inside the box */
+            margin: 5px 0; /* Adds space outside the box so they don't touch */
+            border-radius: 5px; /* Slight curve is usually better than 50% or 5% */
+            box-sizing: border-box;
+            border: 2px solid purple; /* You forgot 'solid' in your code */
+        }
+
+        /* Let's make the form look like a card so we can see margins/padding clearly */
+        form {
+            width: 300px; /* Fixed width */
+            margin: 20px auto; /* Centers the form in the middle of the page */
+            padding: 20px; /* Space inside the border */
+            border: 1px solid gray;
+        }
+        table
+        {
+            width: 300px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our shop</a></li>
+            <li><a href="#">Ye</a></li>
+        </ul>
+    </nav>
+
+    <h1>So this is the main heading.</h1>
+    
+    <a href="https://www.google.com">This is google website</a>
+    
+    <br><br>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Potato</th>
+            <th>a</th>
+            <th>b</th>
+        </tr>
+        <tr>
+            <td>Farhan </td>
+            <td>19</td>
+            <td>yes</td>
+            <td>yes</td>
+            <td>yes</td>
+        </tr>
+        <tr>
+            <td>majod </td>
+            <td>18</td>
+            <td>yes</td>
+            <td>yes</td>
+            <td>yes</td>
+        </tr>
+    </table> <br><br>
+
+    <form>
+        <label for="texto">Texto bar: </label>
+        <input type="text" id="texto" placeholder="input yo">
+        
+        <label for="pass">passo yo passo: </label>
+        <input type="password" id="pass" placeholder="enter yo pass">
+        
+        <label for="timeo">Enter yo timeo: </label>
+        <input type="datetime-local" id="timeo">
+        
+        <label for="checky">check yo skills</label>
+        <input type="checkbox" id="checky">
+
+        <br><br>
+        <button type="submit" style="width: 100%; padding: 10px; background-color: purple; color: white;">Submit</button>
+    </form>
+
+</body>
+</html>
