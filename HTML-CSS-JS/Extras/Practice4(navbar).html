@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Navigation</title>
+    <style>
+        .navbar
+        {
+            background-color: darkslateblue;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            list-style-type: none;
+            padding: 8px 12px;
+        }
+        .navbar li{
+            float: left;
+        }
+        .navbar li a{
+            padding: 14px 16px;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        .navbar li a:hover
+        {
+            background-color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class = "navbar" id="navi">
+            <li id="homey"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        let home = document.getElementById('homey');
+        home.addEventListener('click', function () {
+            alert("Home has been clicked!");
+        }
+
+        );
+    </script>
+</body>
+</html>
