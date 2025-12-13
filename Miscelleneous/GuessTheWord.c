@@ -27,7 +27,7 @@ int main()
         printf("Enter your word.\n");
         scanf(" %s", guess);
         length = strlen(guess);
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             for (int j = 0; j <= 6-length; j++)
             {
@@ -45,7 +45,7 @@ int main()
                 }
             }
         }
-        for (int j = 0; j < 6; j++)
+        for (int j = 0; j < 5; j++)
         {
             for (int i = 0; i <= 6-length; i++)
             {
@@ -65,5 +65,4 @@ int main()
         }
     } while (1);
 return 0;
-
 }
